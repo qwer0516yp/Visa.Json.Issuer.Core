@@ -12,7 +12,7 @@ namespace Visa.Json.Issuer.Core
         {
         }
 
-        public async Task<HttpResponseMessage> TokenInquiryGetAsync(string tokenRequestorID, string tokenReferenceID, IDictionary<string, string> optionalQueryParams)
+        public async Task<HttpResponseMessage> TokenInquiryGetAsync(string tokenRequestorID, string tokenReferenceID, IDictionary<string, string> optionalQueryParams = null)
         {
             var queryStringBuilder = new StringBuilder($"apiKey={_visaJsonRequestManager.GetApiKey()}");
             if (optionalQueryParams != null)
