@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
-using Visa.Json.Issuer.Core.Models;
 
 namespace Visa.Json.Issuer.Core
 {

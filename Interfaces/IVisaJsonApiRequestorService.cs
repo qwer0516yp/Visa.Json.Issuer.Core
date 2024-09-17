@@ -1,4 +1,3 @@
-using Visa.Json.Issuer.Core.Models;
 using System.Collections.Generic;
 using System.Net.Http;
 using System.Threading.Tasks;

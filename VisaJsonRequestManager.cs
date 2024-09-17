@@ -6,18 +6,18 @@ namespace Visa.Json.Issuer.Core
 {
     public class VisaJsonRequestManager : IVisaJsonRequestManager
     {
-        private string _apiKey { get; set; }
-        private string _apiKeySharedSecret { get; set; }
+        private string ApiKey { get; set; }
+        private string ApiKeySharedSecret { get; set; }
 
         public VisaJsonRequestManager(string apiKey, string apiKeySharedSecret)
         {
-            _apiKey = apiKey;
-            _apiKeySharedSecret = apiKeySharedSecret;
+            ApiKey = apiKey;
+            ApiKeySharedSecret = apiKeySharedSecret;
         }
 
         public string GetApiKey()
         {
-            return _apiKey;
+            return ApiKey;
         }
 
         /// <summary>
@@ -45,9 +45,9 @@ namespace Visa.Json.Issuer.Core
 
         private string GetHash(string data)
         {
-            var hashString = new HMACSHA256(Encoding.ASCII.GetBytes(_apiKeySharedSecret));
+            var hashString = new HMACSHA256(Encoding.ASCII.GetBytes(ApiKeySharedSecret));
             var hashbytes = hashString.ComputeHash(Encoding.ASCII.GetBytes(data));
-            string digest = String.Empty;
+            string digest = string.Empty;
 
             foreach (byte b in hashbytes)
             {

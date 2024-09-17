@@ -1,6 +1,6 @@
 using Newtonsoft.Json;
 
-namespace Visa.Json.Issuer.Core.Models
+namespace Visa.Json.Issuer.Core
 {
     public class CardMetadataInfo
     {
